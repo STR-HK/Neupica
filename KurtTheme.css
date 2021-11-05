@@ -1,0 +1,97 @@
+:root {
+    --main-color: #c34351;
+    --opacity-main-color: #EECECE;
+}
+
+.HdlRubberBand {
+    position: relative;
+    display: inline-block;
+    /* width: 54px; */
+    /* height: 34px; */
+}
+
+.HdlRubberBand input {
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+}
+
+.HdlRubberBand-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+
+    border-radius: 34px;
+}
+
+.HdlRubberBand-slider2 {
+    position: absolute;
+    content: "";
+    /* height: 26px;
+    width: 26px; */
+    left: 5px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .2s;
+    transition: .2s;
+
+    border-radius: 50%;
+}
+
+input:checked ~ .HdlRubberBand-slider {
+    background-color: var(--main-color);
+}
+
+/* input:checked ~ .slider2 {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+} */
+
+
+/* NeuInput */
+
+.NeuInput {
+    outline: none;
+    border: 1px #ccc solid;
+    transition: .2s;
+    padding-left: 10px;
+}
+
+.NeuInput:focus {
+    border: 2px var(--main-color) solid
+}
+
+.NeuButton {
+    background-color: var(--main-color);
+    color: white;
+    outline: 0;
+    border: 0;
+    box-shadow: 0px 0px 4px 0px #c34351;
+    /* font-size: ; */
+    cursor: pointer;
+}
+
+.NeuMenuItem {
+    outline: none;
+    border: none;
+    
+}
+
+.NeuMenuItem:hover {
+    background-color: var(--opacity-main-color);
+}
+
+.NeuMenuItem:focus {
+    background-color: var(--main-color);
+    color: white;
+}
